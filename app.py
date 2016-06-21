@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # This needs to be filled with the Page Access Token that will be provided
 # by the Facebook App that will be created.
-PAT = ''
+PAT = 'my_voice_is_my_password_verify_me'
 
 @app.route('/', methods=['GET'])
 def handle_verification():
@@ -16,7 +16,7 @@ def handle_verification():
     return request.args.get('hub.challenge', '')
   else:
     print("Verification failed!")
-    return 'Error, wrong validation token'
+    return 'Error, wrong validation token!! Lol.LOL'
 
 @app.route('/', methods=['POST'])
 def handle_messages():
